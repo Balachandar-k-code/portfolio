@@ -1,0 +1,377 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #009DFF, #FF00FF);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.visit-btn {
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to right, #009DFF, #FF00FF);
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.visit-btn:hover {
+    background: linear-gradient(to right, #FF00FF, #1079D4);
+    transform: scale(1.03);
+}
+
+#menu-icon {
+    display: none;
+    color: white;
+    font-size: 2rem;
+}
+
+/* About Section */
+.about {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-box h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.info-box span {
+    background: linear-gradient(to right, #D049A3, #1079D4);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    background: white;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+/* Social Links */
+.socials {
+    margin-top: 1rem;
+}
+
+.socials a {
+    color: black;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #fff;
+
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 4rem;
+    text-align: center;
+    transition: transform 0.3s;
+    background: white;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card .btn {
+    margin-top: 10rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.project-card p {
+    margin-bottom: 1.5rem;
+}
+
+
+.project-card .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.input-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    font-size: 1rem;
+}
+
+.input input::placeholder {
+    color: #888;
+}
+
+.input i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: black;
+    font-weight: bold;
+}
+
+footer .copyright {
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    header {
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    .about-container {
+        gap: 2rem;
+    }
+
+    .input-box input {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .input-box i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .visit-btn {
+        display: none;
+    }
+
+    .input-box input {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .input-box i {
+        display: none;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    header {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .about img {
+        width: 80vw;
+    }
+
+    .input-box input {
+        width: 80%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
